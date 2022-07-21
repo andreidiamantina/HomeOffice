@@ -1,0 +1,7 @@
+{
+  "name": "HomeOffice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
