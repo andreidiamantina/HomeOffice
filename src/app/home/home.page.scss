@@ -31,3 +31,17 @@ h1{
   color: darkorange;
 }
 
+ion-item {
+  ion-thumbnail {
+    border-radius: 50%;
+    margin-inline-end: 5%;
+  }
+}
+
+ion-chip {
+  padding-inline: 3px;
+}
+
+
+
+
