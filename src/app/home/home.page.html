@@ -8,19 +8,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light">
-
-  <ion-searchbar placeholder="Buscar..."></ion-searchbar>
   <!--
-  Colocar aqui uma lista que puxa do banco de dados todos os usuários aqui do prédio
+  Buscar pelo nome do Usuário-->
+  <ion-searchbar placeholder="Buscar..."></ion-searchbar>
+
+  <!--
+  Colocar aqui uma lista que puxa do banco de dados todos os usuários aqui do prédio;
   Após clicar em cada usuário abre as informações de contato de cada um deles;
  -->
   <ion-list>
-
-    <ion-item lines="full">
-      <img slot="start" src="https://sabt.center/wp-content/uploads/2014/08/avatar-6.png" />
-      <ion-label>Júlia</ion-label>
-      <ion-badge slot="end" color="primary">1</ion-badge>
-    </ion-item>
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <img slot="start" src="https://sabt.center/wp-content/uploads/2014/08/avatar-6.png" />
+        <ion-label>Júlia</ion-label>
+        <ion-badge slot="end" color="primary">1</ion-badge>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="exibirAlerta()">
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
     <ion-item lines="full">
       <img slot="start" src="https://tabeelcontabilidade.com.br/wp-content/uploads/avatar-2.png" />
@@ -49,17 +57,22 @@
   </ion-list>
 </ion-content>
 
+
+<!--
+  Ao clicar no icone de telefone, liga para o número informado;
+  Ao clicar no email, abre um email para enviar para aquele usuário;
+  Ao clicar na seta (mudar isso), sai da aplicação;
+-->
 <ion-tabs>
-  <!-- Tab bar -->
   <ion-tab-bar slot="bottom" color="success">
     <ion-tab-button tab="account">
-      <ion-icon name="accessibility"></ion-icon>
+      <ion-icon name="call"></ion-icon>
     </ion-tab-button>
     <ion-tab-button tab="contact">
       <ion-icon name="at-circle"></ion-icon>
     </ion-tab-button>
     <ion-tab-button tab="settings">
-      <ion-icon name="arrow-undo"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>
